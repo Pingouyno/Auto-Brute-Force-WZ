@@ -209,6 +209,19 @@ def skip_check(c1,c2):
     if room1[0]!=room2[0] and room1[1]==room2[1]==True:
         skip=True
 
+    for i in range(8):
+
+        char1=c1[i]
+        char2=c2[i]
+        
+        if char1.isalpha() and char2.isalpha() and char1!=char2:
+            skip=False
+            break
+        
+        elif char1.isdigit() and char2.isdigit() and char1!=char2:
+            skip=False
+            break
+
     return skip
 
 
@@ -304,6 +317,8 @@ def nose_room(code):
 
     for n in lis_n:
 
+        lis=[]
+
         for c in lis_c:
             lis_h=""
            
@@ -328,7 +343,7 @@ def nose_room(code):
                            
                 lis.append(comb)
 
-    print_list(lis)
+        print_list(lis)
 
 
 
@@ -354,6 +369,8 @@ def house_room(code):
            
     for h in lis_h:
 
+        lis=[]
+
         for c in lis_c:
             lis_n=""
            
@@ -378,7 +395,7 @@ def house_room(code):
                            
                 lis.append(comb)
 
-    print_list(lis)
+        print_list(lis)
        
 
 
@@ -494,6 +511,7 @@ while not valid:
 
     c1=input(("code 1: ")).lower()
     c2=input(("code 2: ")).lower()
+    
     
     if c2=="":
         valid = check_room(c1)[1]
