@@ -143,6 +143,8 @@ def bforce(code):
             
             
         if end:break
+
+    return end
         
 
 
@@ -251,7 +253,9 @@ def print_list(lis):
 
     cpt=0
 
-    bforce(lis)
+    end=bforce(lis)
+
+    return end
     
 
 def china_room(code):
@@ -342,9 +346,9 @@ def nose_room(code):
                             comb=comb+h
                            
                 lis.append(comb)
-
-        print_list(lis)
-
+                
+        end=print_list(lis)
+        if end:break
 
 
 def house_room(code):
@@ -395,8 +399,8 @@ def house_room(code):
                            
                 lis.append(comb)
 
-        print_list(lis)
-       
+        end=print_list(lis)
+        if end:break      
 
 
 def code1(c1):
