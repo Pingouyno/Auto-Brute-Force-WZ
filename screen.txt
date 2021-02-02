@@ -1,1 +1,1 @@
-Game screen size: 1920x1080c
+Game screen size: 1920x1080
