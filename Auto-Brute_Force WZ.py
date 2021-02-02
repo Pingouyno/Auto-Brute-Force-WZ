@@ -1,6 +1,7 @@
 import pyautogui
 import time
 import ctypes
+import sys
 
 pyautogui.FAILSAFE=False
 
@@ -74,6 +75,41 @@ def pos(mouse):
         if i=="y":y_detect=True
         
     return (pos_x,pos_y)
+
+
+def getGameScreenSize():
+
+    contents=""
+    
+    with open ('screen.txt','r+') as myfile:
+        for i in myfile:
+            contents = i[18:]
+    x=""
+    y=""
+ 
+    afterX=False
+    for i in contents:
+        if i=="x" and not afterX:
+            afterX=True
+        
+        else:
+            
+            if not i.isdigit():
+                print()
+                print('INVALID CONTENT IN "screen.txt" : PROGRAM KILLED')
+                sys.exit()
+
+            if not afterX:
+                x=x+i
+                
+            else:
+                y=y+i
+            
+    screensize = [int(x),int(y)]
+
+    return screensize
+
+    
         
 
 def bforce(code):
@@ -82,16 +118,16 @@ def bforce(code):
 
     timer=8
 
-    user32 = ctypes.windll.user32
-    screensize = user32.GetSystemMetrics(78), user32.GetSystemMetrics(79)
-    
-    x=screensize[0]
-    y=screensize[1]
+    gamescreen=getGameScreenSize()
+    x=gamescreen[0]
+    y=gamescreen[1]
 
     xy=pos(str(pyautogui.position()))
     pos_x=xy[0]
     pos_y=xy[1]
-    
+
+    a=0
+
     while pos_x>10 or pos_y<y-10:
         xy=pos(str(pyautogui.position()))
         pos_x=xy[0]
@@ -99,7 +135,6 @@ def bforce(code):
         time.sleep(0.25)
             
     time.sleep(1.25)
-
         
     for i in code:
         
