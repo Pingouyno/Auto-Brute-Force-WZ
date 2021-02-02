@@ -5,26 +5,28 @@ DESCRIPTION : This python program serves as a macro to brute-force the Stadium l
 
 HOW TO USE : 
 
-Enter your screen resolution in the "screen.txt" text file.
+ 1 | Enter your screen resolution in the "screen.txt" text file.
+ 
+ 2 | Start the Python program.
 
-Input 1 or 2 codes, with the symbols as "C" (China), "N" (Nose) or "H" (House).
+ 3 | Input 1 or 2 codes, with the symbols as "C" (China), "N" (Nose) or "H" (House).
 
-To brute-force from a single code, enter an empty field in the second input.
+ 4 | To brute-force from a single code, enter an empty field in the second input:
 
-EXAMPLE: 
+   EXAMPLE: 
 
-- code 1: nnnhh123 
-- code 2:
+   - code 1: nnnhh123 
+   - code 2:
 
-If the input is valid, the macro will be ready for brute-forcing.
+5 | If the input is valid, the macro will be ready for brute-forcing.
 
-- To start the macro, move your cursor to the bottom-left corner of your screen.
+   - To start the macro, move your cursor to the bottom-left corner of your screen.
 
-- To end the macro, move your cursor to the top-left corner of your screen.
+   - To end the macro, move your cursor to the top-left corner of your screen.
 
-- To pause the macro, move your cursor to the top-right corner of your screen.
+   - To pause the macro, move your cursor to the top-right corner of your screen.
 
-- To resume the macro, move your cursor to the bottom-right corner of your screen.
+   - To resume the macro, move your cursor to the bottom-right corner of your screen.
 
 
 NOTES: 
