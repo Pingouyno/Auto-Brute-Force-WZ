@@ -18,7 +18,7 @@ HOW TO USE :
    - code 1: nnnhh123 
    - code 2:
 
-5 | If the input is valid, the macro will be ready for brute-forcing.
+5 | If the input is valid, the macro will be ready for brute-forcing. Open your game window and interact with Stadium keypad.
 
    - To start the macro, move your cursor to the bottom-left corner of your screen.
 
